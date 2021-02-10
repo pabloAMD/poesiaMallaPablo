@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-toolbar color="tema">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title style="padding-left: 0" class=" ion-text-center ">Registro</ion-title>
+        </ion-toolbar>
+    </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+    <br>
+    <h3 class="titulo">Registrar Destino Turistico</h3>
+    <br>
+    <ion-item>
+        <ion-label position="floating ">Autor</ion-label>
+        <ion-input [(ngModel)]="poesia.autor" name="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating ">Texto</ion-label>
+        <ion-input [(ngModel)]="poesia.texto" name="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating ">Imagen</ion-label>
+        <ion-input (change)="cargaImagen($event)" type="file"></ion-input>
+        <h1>{{imagePoesia}}</h1>
+    </ion-item>
+    <br>
+    <br>
+    <ion-button color="danger" (click)=" cargarImgBase()" expand="block ">Publicar</ion-button>
+</ion-content>
